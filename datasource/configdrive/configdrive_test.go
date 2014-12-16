@@ -45,13 +45,13 @@ func TestFetchMetadata(t *testing.T) {
 		},
 		{
 			"/",
-			"/openstack/latest/meta_data.json",
-			mockFilesystem([]string{"/openstack/latest/meta_data.json"}),
+			"/lvmcloud/latest/meta_data.json",
+			mockFilesystem([]string{"/lvmcloud/latest/meta_data.json"}),
 		},
 		{
 			"/media/configdrive",
-			"/media/configdrive/openstack/latest/meta_data.json",
-			mockFilesystem([]string{"/media/configdrive/openstack/latest/meta_data.json"}),
+			"/media/configdrive/lvmcloud/latest/meta_data.json",
+			mockFilesystem([]string{"/media/configdrive/lvmcloud/latest/meta_data.json"}),
 		},
 	} {
 		cd := configDrive{tt.root, tt.files.readFile}
@@ -78,13 +78,13 @@ func TestFetchUserdata(t *testing.T) {
 		},
 		{
 			"/",
-			"/openstack/latest/user_data",
-			mockFilesystem([]string{"/openstack/latest/user_data"}),
+			"/lvmcloud/latest/user_data",
+			mockFilesystem([]string{"/lvmcloud/latest/user_data"}),
 		},
 		{
 			"/media/configdrive",
-			"/media/configdrive/openstack/latest/user_data",
-			mockFilesystem([]string{"/media/configdrive/openstack/latest/user_data"}),
+			"/media/configdrive/lvmcloud/latest/user_data",
+			mockFilesystem([]string{"/media/configdrive/lvmcloud/latest/user_data"}),
 		},
 	} {
 		cd := configDrive{tt.root, tt.files.readFile}
@@ -105,11 +105,11 @@ func TestConfigRoot(t *testing.T) {
 	}{
 		{
 			"/",
-			"/openstack",
+			"/lvmcloud",
 		},
 		{
 			"/media/configdrive",
-			"/media/configdrive/openstack",
+			"/media/configdrive/lvmcloud",
 		},
 	} {
 		cd := configDrive{tt.root, nil}

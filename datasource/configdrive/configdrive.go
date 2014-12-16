@@ -69,7 +69,7 @@ func (cd *configDrive) Type() string {
 }
 
 func (cd *configDrive) openstackRoot() string {
-	return path.Join(cd.root, "openstack")
+	return path.Join(cd.root, "lvmcloud")
 }
 
 func (cd *configDrive) openstackVersionRoot() string {
